@@ -1,0 +1,491 @@
+$base-color: rgba(250, 155, 12, 0.4); /*Farge hentet fra Figma*/
+
+
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    max-width: 1400px;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    }
+        header {
+            grid-area: header;
+            #logo{
+                display: flex;
+                justify-content: center;
+            }
+            nav {
+                display: flex;
+                align-items: baseline;
+                width: 100%;
+                flex-wrap: wrap;
+                justify-content: end;
+                #sokefelt{
+                    display: flex;
+                    text-align: left;
+                    text-decoration: none;
+                    padding: 1rem;
+                    font-size: 30px;
+                    margin-right: auto;
+                    
+                 }
+                #ikon-liste{
+                    display: flex;
+                    text-decoration: none;
+                    justify-content: end;
+                    gap: 0.5rem; 
+                    padding: 1rem; 
+                        a{
+                            font-size: 30px;
+                        }
+
+                }
+                #nav-liste{
+                  margin:0.5rem;
+                  padding: 0.5rem;  
+                }      
+                    ul li{
+                        display: inline-block;
+                        list-style: none;
+                            a{
+                            color:black;
+                            /*Meningen at de skal ha understrek, se wireframes*/
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: baseline;
+                            gap: 1rem;
+                            }
+                     }
+
+                }
+               }
+            
+        main {
+            section{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            grid-area: main;
+            }
+            #host-k-bilde{
+                display:flex;
+                justify-content: center;
+                #host-k{
+                    border-radius: 5px;
+                    border: 2px solid #000;
+                    background-color:#E3C9A1;
+                    /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
+                    padding: 0.5rem;
+                    font-size: 25px;
+                    height: fit-content;
+                    text-decoration: none;
+                    display: flex;
+                    position:absolute;
+                    width: 56%;
+                    bottom: -100px;
+                    
+                }
+            }
+            #host-k-tekst{
+                border-radius: 5px;
+                border: 2px solid #000;
+                background-color:$base-color;
+                /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
+                padding: 0.5rem;
+                margin: 2rem;
+                width: 50%;
+                font-size: 25px;
+                text-decoration: none;
+                display: flex;
+                text-align:center;
+                align-items: center;
+
+                .free{
+                    margin: 3rem;
+                }
+
+            }
+
+            }
+            #produktene{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                width:fit-content;
+                justify-content: center;
+
+                .produkt-bokser{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    img{
+                        padding-left: 2rem;
+                        display: flex;
+                        justify-content: center;
+                        width: 80%;
+                        background-color:$base-color;
+                        margin:0.5rem;
+                    }
+                    h3{
+                        width:fit-content;
+                    }
+                    p{
+                        width: fit-content;
+                    }
+                }
+  
+            }
+            .produktbokser-PC{
+                display:none;
+            }
+            
+        }
+        
+         footer {
+            grid-area: footer;
+            nav{
+                ul{
+                    display:flex;
+                    justify-content: space-around;
+                    list-style: none;
+                }
+            }
+            #sosiale-medier{
+                display: flex;
+                list-style: none;
+                align-items: baseline;
+                text-decoration: none;
+                justify-content: space-around;
+                    
+                li{                        
+                    padding: 0.5rem;
+                    font-size: 40px;
+
+                }
+            }
+            #copyright{
+                display:flex; /*Hvorfor vil ikke denne drit greia funke??? Hvorfor er den på diplay: block*/
+                justify-content: end;
+                margin: 0.5rem;
+            }
+            
+
+         }
+
+
+#main-prod{
+    #prod-bilde-pc{
+        display:none;
+    }
+    section{
+
+        h3{
+            font-size: 32px;
+        }
+        #prod-bilde{
+            order: -1;
+            #prod-bilde-PC{
+                display:none;
+            }
+        }
+    
+    }
+    #prod-kat{
+        min-width: 85%;
+        font-size: 30px;
+        #stjerner{
+            display: flex;
+            flex-direction: row;
+            align-items:baseline;
+            justify-content: end;
+            flex-wrap: wrap;
+            padding: 0.5rem;
+
+            p{
+                font-size: 24px;
+            }
+            a{
+                font-size:24px;
+                flex-direction:column;
+            }
+        }
+        .kategori-knapp{
+            border: solid;
+            text-align: center;
+            border-radius: 5px;
+            padding: 0.8rem;
+        }
+            #legg-handlekruv{
+            border: solid;
+            text-align: center;
+            border-radius: 5px;
+            padding: 0.5rem;
+            background-color: $base-color; 
+    
+            a{
+                text-decoration: none;
+            }
+        }
+        #storrelseguide{
+            border: solid;
+            text-align: center;
+            border-radius: 5px;
+            padding: 0.5rem;
+            font-size:14px;
+            width:fit-content;
+        }
+    }
+
+
+}
+
+
+
+#main-f-og-r{
+    grid-area: main;
+    h2{
+        display:flex;
+        text-align: center;
+    }
+    img {
+        display: none;
+    }
+    #sjekk-best{
+        border-radius: 5px;
+        border: 2px #000;
+        background-color:#fff;
+        h3{
+            font-size: 30px;
+        }
+        label{
+            padding:0.4rem;
+            input{
+                width:100%;
+                padding:1rem;
+                font-size: 19px;
+                margin: 0.4rem;
+            }
+        }
+    }
+    #frakt-info{
+        margin: 0.5rem;
+        border-style: solid;
+        padding: 0.4rem;
+        text-align: center;
+        .post-bring{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: nowrap;
+            max-width:25%;
+            padding: 0.5rem;
+
+        }
+    }
+    #retur-info{
+        margin:0.5rem;
+        border-style: solid;
+        padding: 0.4rem;
+        text-align: center;
+    }
+    #retur-btn{
+        display: inline;
+        border-radius: 5px;
+        border: 2px solid #000;
+        background-color:rgba(250, 155, 12, 0.4);
+        /*Brukte Figma sin develpor modus for å få riktig farge og border for knappen*/
+        padding: 0.6rem;
+        font-size: 20px;
+        text-decoration: none;
+
+    }
+    .les-mer{
+        display:flex;
+        text-align: right;
+        font-size: 12px;
+        justify-content: end;
+        flex-direction: column;
+        margin: 0.5rem;
+        
+    }
+
+
+}
+
+@media only screen and (min-width: 600px){
+body{
+    #grid-container{
+        grid-template-areas: 
+            "header header header" "main main main" "footer footer footer";
+            row-gap: 0.5rem;
+        }
+    header{
+        grid-area:header;
+        #logo{
+            display:flex;
+            justify-content: start; /*Hvorfor funker det ikke?*/
+        }
+        nav{
+            #nav-liste{
+                display: flex;
+                font-size: 30px;
+
+                li{
+                    padding: 1rem;
+                    margin: 1rem;
+                }
+            }
+            }  
+            } 
+    #host-k-section{
+        grid-area: main;
+        display: grid;
+        grid-template-areas: "kol1 kol2";  
+            #host-k-bilde{
+                grid-area: "kol1" "row1";
+                display:flex;
+                justify-content: center;
+                height: fit-content;
+                width: 100%;
+                #host-k{
+                    height: fit-content;
+                    width: fit-content;
+                }
+            }
+            #host-k-tekst{
+                grid-area: kol2;
+                width:fit-content;
+                height:fit-content;
+                padding: 1rem;
+                margin: 2rem;
+
+                .free{
+                    margin: 12rem;
+                }
+
+
+            }
+        }
+        #produktene{
+            display:grid;
+            grid-template-areas:"row1 row2 row3 row4 row5";
+
+            .produkt-bokser{
+                margin: 0.5rem;
+            }
+            .produktbokser-PC{
+                display:flex;
+            }
+            #Kilkenny{
+                grid-area: row1;
+                img{
+                    height: 202px;
+                }
+            }
+            #chaps{
+                grid-area: row2;
+                img{
+                    height: 202px;
+                }
+            }
+            #spirit{
+                grid-area: row3;
+                img{
+                    height: 202px;
+                }
+            }
+            #ridestrømper{
+                grid-area: row4;
+                img{
+                    height: 202px;
+                }
+            }
+            #snowy{
+                grid-area: row5;
+                img{
+                    height: 202px;
+                }
+            }
+        }
+ 
+    }
+    
+
+    #main-prod{ 
+        grid-area: main;
+        #prod-grid{
+            display:grid;
+            grid-template-areas: "kol1 kol2 kol3";
+            
+            h3{
+                grid-area:kol3;
+                padding: 0.5rem;
+                margin: 0.5rem;
+                
+            }
+            #prod-bilde{
+                grid-area: kol2;
+                
+            }
+            #prod-bilde-pc{
+                grid-area: kol1;
+                display: flex;
+                flex-direction: column;
+                width: 130px;
+            }
+            #prod-kat{
+                grid-area: kol3;
+
+                #stjerner{
+                    padding: 0.5rem;
+                    margin-top: 2rem;
+                }
+            }
+        }
+        
+    }
+    #main-f-og-r{
+        grid-area: main;
+        nav{
+            text-align: baseline;
+        }
+        #f-r-grid{
+            display:grid;
+            grid-template-areas:"kol1 kol2 kol3" "rad1 rad2 rad3";
+            row-gap: 1rem;
+            h2{
+                grid-area: kol1 kol2 kol3;
+            }
+            img{
+                grid-area: kol1 rad1;
+                display:flex;
+                width: 100%;
+            }
+            #sjekk-best{
+                grid-area: kol2 kol3;
+                margin: 1rem;
+            }
+            #frakt-info{
+                grid-area: rad2;
+            }
+            #retur-info{
+                grid-area: rad3;
+            }
+        
+        }
+    footer{
+        grid-area: footer;
+    }
+    }
+}
+
+
