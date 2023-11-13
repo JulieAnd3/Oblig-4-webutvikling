@@ -9,18 +9,18 @@
     <link href="css/font/css/solid.css" rel="stylesheet">
     <title>Skohesten.no</title>
 </head>
-<body class="index">
+<body id="ana">
         <header>
                 <span id="logo">
                     <a href="index.html"><img src="img/sko-hesten-logo.jpg" alt="Skohesten logo"></a>
                 </span>
             <nav>
-                <a href="#" id="sokefelt"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" id="sokefelt"><i class="fa-solid fa-magnifying-glass" aria-label="søkefelt"></i></a>
                 <div id="ikon-liste"> 
-                    <a href="f-og-r.html" id="lastebil"><i class="fa-solid fa-truck"></i></a>
-                    <a href="#" id="bruker"><i class="fa-solid fa-user"></i></a>
-                    <a href="#" id="fav"><i class="fa-solid fa-heart"></i></a>
-                    <a href="#" id="handlekurv"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="f-og-r.html" id="lastebil"><i class="fa-solid fa-truck" aria-label="Frakt og retur side"></i></a>
+                    <a href="#" id="bruker"><i class="fa-solid fa-user" aria-label="Din bruker"></i></a>
+                    <a href="#" id="fav"><i class="fa-solid fa-heart" aria-label="Dine favoritter"></i></a>
+                    <a href="#" id="handlekurv"><i class="fa-solid fa-cart-shopping" aria-label="din handlekruv"></i></a>
                 <!--Alle ikonene er fra Fontawsome-->
                 </div>
                 <ul id="nav-liste">
@@ -43,39 +43,106 @@
             </p>
         </article>
         <section>
-            <h2>SEO</h2>
+            <h2>Lighthouse</h2>
             <article>
-                <h3>Før</h3>
+                <h3>Før forside</h3>
+                <img src="img/tester/lighthouse-forside-test-1.png" alt="lighthouse analyse av forside">
+                <p>Lighthouse reagerte svært negativt på performance og var ikke helt fornøyd med SEO heller</p>
+                <img src="img/tester/lighthouse-forside-muligheter.png" alt="lighthouse analyse forside muligheter">
+                <p>Bildene viser at lighthouse ikke er så veldig glad i bildeformatet PNG og JPG. Dette påvirker performance negativt</p>
+                <img src="img/tester/mangler-meta.png" alt="lighthouse viser at nettsiden mangler en meta tagg" >
+                <p>Vi ser at SEO blir trukket ned av manglende meta tag</p>
+                <img src="img/tester/lighthouse-fogr-kraviling.png" alt="frakt og retur side mangler for optimal SEO">
+                <p>På frak og retur siden ser vi at den eneste manglen var å legge en href på a taggene "les mer". Siden nettsiden bare består av tre sider er det ikke noe mer å lese og det blir bare plassert en #</p>
             </article>
             <article>
-                <h3>Etter</h3>
-            </article>
+                <h3>Etter forside</h3>
+                <p>Brukte <a href="https://squoosh.app/">squoosh app</a> til å forandre bildene fra png til avif filer for raskere opplasting. Dette trakk peromance opp kraftig for nettsiden.</p>
+                <img src="img/tester/lighthouse-forside-resultat.png" alt="lighthouse resultat for performance">
+                <p>Skrev inn den savnende meta taggen noe som gjorde at produktsiden også ble fornøyd</p>
+                <img src="img/tester/lighthouse-produktside-resultat.png" alt="lighthouse resultat for produksiden">
+                <p>Med justeringen i a taggene "les mer" ble lighthouse også fornøyd med frakt og retur siden</p>
+                <img src="img/tester/lighthouse-fogr-resultater.png" alt="lighthouse resultat for frakt og retur">
         </section>
         <section>
-            <h2>UU</h2>
+            <h2>Webaim</h2>
             <article>
                 <h3>Før</h3>
-            </article>
-            <article>
-                <h3>Etter</h3>
+                <img href="img/tester/wawe-forside-errors.png" alt="webaim errorer">
+                <p>Problemet er at linkene ikke har navn og ligger naven som gjør det vanskelig for de svaksynte. Siden det er meningen at linkene skal være sånn blir det ikke forandret. En løsning er å innkludere dere disse linkene i hamburgermeny</p>
             </article>
         </section>
         <section>
             <h2>ChatGTP</h2>
+            <img href="img/tester/chatgtp-forside-seo-test-1.png" alt="test resultat fra chatgtp">
+            <p>ChatGTP vil også at vi skal ha beskrivende meta tag. Den retter også på en typo i viewporten.</p>
         </section>
-        <section>
-            <h2>Tabell</h2>
+        <section id="oppsum-samlik">
+            <h2>Oppsumering og sammenlikning av resultater</h2>
+            <article id="liste-til">
+                <h3>Liste over tiltak</h3>
+                <ol>
+                    <li>Forandre bilde filene fra png til avif</li>
+                    <li>Legg inn en beskrivende meta tag</li>
+                    <li>Legge til en href i "les mer" linkene</li>
+                    <li>Rette opp typo i viewporten</li>
+                </ol>
+            </article>
+            <article>
+                <h3>Tabell</h3>
+                <table id="tabell">
+                    <tbody>
+                        <tr>
+                            <th>Problem</th>
+                            <th>Lighthouse</th>
+                            <th>Webaim</th>
+                            <th>ChatGTP</th>
+                        </tr>
+                        <tr>
+                            <th>Gammelt bilde format</th>
+                            <th>Ja</th>
+                            <th>Nei</th>
+                            <th>Nei</th>
+                        </tr>
+                        <tr>
+                            <th>Beskrivende meta</th>
+                            <th>Ja</th>
+                            <th>Nei</th>
+                            <th>Ja</th>
+                        </tr>
+                        <tr>
+                            <th>Linke navn</th>
+                            <th>Ja</th>
+                            <th>Ja</th>
+                            <th>Ja</th>
+                        </tr>
+                        <tr>
+                            <th>Typo i viewport</th>
+                            <th>Ja</th>
+                            <th>Nei</th>
+                            <th>Ja</th>
+                        </tr>
+                        <tr>
+                            <th>Manglende href</th>
+                            <th>Ja</th>
+                            <th>Nei</th>
+                            <th>Nei</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+
         </section>
         <section>
             <h2>Tilgjenlighet</h2>
+            <article>
+                <h3>Skjermleser</h3>
+                <p>Skjermleseren funker fint gjennom meste parten av nettsiden. Eneste som kom fra som litt feil var navnene på produktbildene på forsiden.
+                    F.eks: Tok vi alt teksten fra"Ridesko i en stall" til "Kilkenny Jodphur ridestøvler på modell i en stall". Denne forandringen gjorde det lettere å forstå det faktiske innholdet av bildet.
+                    Brukte aria-labels så når brukeren er over navigeringsikonene så får de informasjon om hva ikonet linker til for mer lettere navigering.
+                </p>
+            </article>
         </section>
-        <section>
-            <h2>Microdata</h2>
-        </section>
-        <section>
-            <h2>Meta og SOME</h2>
-        </section>
-
     </main>
     <footer>
         <nav>

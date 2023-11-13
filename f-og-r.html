@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width inital-scale=1.0">
+    <meta name="viewport" content="width=device-width, inital-scale=1.0">
+    <meta name="description" content="shipping and return site for skohesten.no">
+    <meta property="og:url" content="https://itstud.hiof.no/~julia/oblig-4-webutvikling/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title"  content="Shipping and return">
+    <meta property="og:description" content="See you shipping and return opportunities">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
     <link href="css/font/css/brands.css" rel="stylesheet">
@@ -13,15 +18,15 @@
     <div class="grid-container" id="f-og-r">
     <header>
         <span id="logo">
-            <a href="index.html"><img src="img/sko-hesten-logo.jpg" alt="Skohesten logo"></a>
+            <a href="index.html"><img src="img/sko-hesten-logo.avif" alt="Skohesten logo"></a>
         </span>
         <nav>
-            <a href="#" id="sokefelt"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="#" id="sokefelt"><i class="fa-solid fa-magnifying-glass" aria-label="søkefelt"></i></a>
             <div id="ikon-liste"> 
-                <a href="f-og-r.html" id="lastebil"><i class="fa-solid fa-truck"></i></a>
-                <a href="#" id="bruker"><i class="fa-solid fa-user"></i></a>
-                <a href="#" id="fav"><i class="fa-solid fa-heart"></i></a>
-                <a href="#" id="handlekurv"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="f-og-r.html" id="lastebil"><i class="fa-solid fa-truck" aria-label="Frakt og retur side"></i></a>
+                <a href="#" id="bruker"><i class="fa-solid fa-user" aria-label="Din bruker"></i></a>
+                <a href="#" id="fav"><i class="fa-solid fa-heart" aria-label="Dine favoritter"></i></a>
+                <a href="#" id="handlekurv"><i class="fa-solid fa-cart-shopping" aria-label="din handlekruv"></i></a>
             <!--Alle ikonene er fra Fontawsome-->
             </div>
             <ul id="nav-liste">
@@ -34,6 +39,7 @@
                 <li><a href="analyse.html">Analyse</a></li>
             </ul>
         </nav>
+        <a href="#main-f-og-r">Hovedinnhold</a>
     </header>
     <main id="main-f-og-r">
         <nav>
@@ -64,14 +70,14 @@
                     <!--<a href=https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Posten-Norge-Logo.svg/2560px-Posten-Norge-Logo.svg.png>Posten</a>-->
                     <img src="img/bring.png" alt="bring" class="post-bring" id="bring">
                     <!--<a href=https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Bring_logo.svg/2560px-Bring_logo.svg.png>Bring</a>-->
-                    <a class="les-mer">Les mer</a>
+                    <a href="#" class="les-mer">Les mer</a>
                 </article>
                 <article id="retur-info">
                     <h3>Retur</h3>
                     <p>40 dagers returrett! For å være kvalifisert for retur, må varen være ubrukt og i samme stand som da du mottok den. Den må være i originalemballasjen. </p> 
                     <!--Tekst tatt fra Horze.no sine sider-->
                     <a href="#" id="retur-btn">Returskjema</a>
-                    <a class="les-mer">Les mer</a>
+                    <a href="#" class="les-mer">Les mer</a>
                 </article>
             </div>
         </section>

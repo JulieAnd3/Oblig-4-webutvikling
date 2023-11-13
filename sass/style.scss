@@ -116,6 +116,7 @@ body{
 
                 img{
                     max-width: 70%;
+                    height:auto;
                 }
 
                 .free{
@@ -340,6 +341,44 @@ body{
     }
 
 
+}
+
+#microdata{
+    display:none;
+}
+
+#ana{
+    font-size:24px;
+    
+    img{
+        width:100%;
+        height:auto;
+    }
+
+    #oppsum-samlik{
+        display:flex;
+        flex-wrap:wrap;
+
+        #liste-til{
+            margin:2rem;
+        }
+    }
+
+    #tabell{
+        display: table;
+        border-collapse: separate;
+        box-sizing: border-box;
+        text-indent: initial;
+        border: 2px;
+        border-color:#000;
+        border-style: solid;
+       
+        th{
+            border: 2px;
+            border-color:#000;
+            border-style: solid;
+        }
+    }
 }
 
 @media only screen and (min-width: 1000px){

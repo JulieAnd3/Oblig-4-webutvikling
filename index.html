@@ -1,8 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width inital-scale= 1.0">
+    <meta name="description" content="a website that sell riding boots, shoes and accessories">
+    <meta property="og:url" content="https://itstud.hiof.no/~julia/oblig-4-webutvikling/index.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title"  content="Skohesten.no">
+    <meta property="og:description" content="A website that sells amazing ridning boots, shoes and accessories">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/font/css/fontawesome.css" rel="stylesheet">
     <link href="css/font/css/brands.css" rel="stylesheet">
@@ -13,15 +18,15 @@
     <div class="grid-container" id="index">
         <header>
                 <span id="logo">
-                    <a href="index.html"><img src="img/sko-hesten-logo.jpg" alt="Skohesten logo"></a>
+                    <a href="index.html"><img src="img/sko-hesten-logo.avif" alt="Skohesten logo"></a>
                 </span>
             <nav>
-                <a href="#" id="sokefelt"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#" id="sokefelt"><i class="fa-solid fa-magnifying-glass" aria-label="søkefelt"></i></a>
                 <div id="ikon-liste"> 
-                    <a href="f-og-r.html" id="lastebil"><i class="fa-solid fa-truck"></i></a>
-                    <a href="#" id="bruker"><i class="fa-solid fa-user"></i></a>
-                    <a href="#" id="fav"><i class="fa-solid fa-heart"></i></a>
-                    <a href="#" id="handlekurv"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="f-og-r.html" id="lastebil"><i class="fa-solid fa-truck" aria-label="Frakt og retur side"></i></a>
+                    <a href="#" id="bruker"><i class="fa-solid fa-user" aria-label="Din bruker"></i></a>
+                    <a href="#" id="fav"><i class="fa-solid fa-heart" aria-label="Dine favoritter"></i></a>
+                    <a href="#" id="handlekurv"><i class="fa-solid fa-cart-shopping" aria-label="din handlekruv"></i></a>
                 <!--Alle ikonene er fra Fontawsome-->
                 </div>
                 <ul id="nav-liste">
@@ -34,23 +39,24 @@
                     <li><a href="analyse.html">Analyse</a></li>
                 </ul>
             </nav>
+            <a href="#host-k-section">Hovedinnhold</a>
         </header>
     <main>
         <section id="host-k-section">
             <article id="host-k-bilde">
-            <img src="img/modell-på-hest-free.png" alt="Modell på gressnede hest">
+            <img src="img/forsidebilde-h.avif" alt="Modell på gressnede hest">
             <!--Bilde satt sammen av <a href= https://e0.pxfuel.com/wallpapers/672/593/desktop-wallpaper-woman-white-horse-aesthetic-ultra-background-aesthetic-animals.jpg>Modell på hest</a> og <a href= https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqIYg0yD4TDJ3sV0ompuwK75fX8o1SKyzImg&usqp=CAU>Enkel ridestøvel</a>-->
             <a href="produkt.html" id="host-k">Ny høstkolleksjon</a>
             </article>
             <article id="host-k-tekst">
                 <p>Oppdag den nye høstkolleksjonen 
-                <a href="produkt.html" class="free"><img src="img/free.png" alt="Free høstkolleksjon"></a>
+                <a href="produkt.html" class="free"><img src="img/free.avif" alt="Free høstkolleksjon"></a>
                 Laget av kvalitetsmatirale og designet for komfort og opptimal yttelse </p>
             </article>
         </section>
         <section id="produktene">
             <article class="produkt-bokser" id="Kilkenny"> 
-                <img src="img/ridesko-kilkenny-jodphur-f.jpg" alt="Ridesko i en stall">
+                <img src="img/ridesko-kilkenny-jodphur-f.avif" alt="Ridesko i en stall">
                 <!--<a href=https://www.horze.no/dw/image/v2/AATB_PRD/on/demandware.static/-/Sites-main-catalog/default/dw875dd899/horze/38067_br_08.jpg?sw=535&q=55&filename=horze-kilkenny-jodphur-damemodell-brown.jpg>Ridesko, Kilkenny Jodphur</a>-->
                 <h3>Kilkenny Jodphur</h3>
                 <p>399 kr</p>

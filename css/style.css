@@ -109,6 +109,7 @@ body main #host-k-tekst {
 }
 body main #host-k-tekst img {
   max-width: 70%;
+  height: auto;
 }
 body main #host-k-tekst .free {
   margin: 3rem;
@@ -308,6 +309,39 @@ body footer #copyright {
   justify-content: end;
   flex-direction: column;
   margin: 0.5rem;
+}
+
+#microdata {
+  display: none;
+}
+
+#ana {
+  font-size: 24px;
+}
+#ana img {
+  width: 100%;
+  height: auto;
+}
+#ana #oppsum-samlik {
+  display: flex;
+  flex-wrap: wrap;
+}
+#ana #oppsum-samlik #liste-til {
+  margin: 2rem;
+}
+#ana #tabell {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  border: 2px;
+  border-color: #000;
+  border-style: solid;
+}
+#ana #tabell th {
+  border: 2px;
+  border-color: #000;
+  border-style: solid;
 }
 
 @media only screen and (min-width: 1000px) {
